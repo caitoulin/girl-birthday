@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>给小宝的生日惊喜</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎂</text></svg>">
+  <meta name="theme-color" content="#ff6b95">
+  <style>
+    /* 预加载样式，减少闪烁 */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+    }
+    
+    #root {
+      min-height: 100vh;
+    }
+    
+    .initial-loading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #fff0f5;
+    }
+    
+    .heart-loader {
+      position: relative;
+      width: 50px;
+      height: 45px;
+      animation: heartbeat 1.2s infinite;
+    }
+    
+    .heart-loader:before,
+    .heart-loader:after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 45px;
+      background-color: #ff6b95;
+      border-radius: 30px 30px 0 0;
+    }
+    
+    .heart-loader:before {
+      left: 0;
+      transform: rotate(-45deg);
+      transform-origin: 100% 100%;
+    }
+    
+    .heart-loader:after {
+      left: 20px;
+      transform: rotate(45deg);
+      transform-origin: 0% 100%;
+    }
+    
+    @keyframes heartbeat {
+      0% { transform: scale(0.8); }
+      50% { transform: scale(1); }
+      100% { transform: scale(0.8); }
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <div class="initial-loading">
+      <div class="heart-loader"></div>
+    </div>
+  </div>
+</body>
+</html>

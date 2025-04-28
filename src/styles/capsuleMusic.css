@@ -1,0 +1,137 @@
+@import url('./variables.css');
+
+.capsule-music {
+  position: fixed;
+  bottom: 80px;  /* 位于音乐播放器上方 */
+  right: 20px;
+  background: linear-gradient(135deg, var(--timecapsule-color), #ffcc80);
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 60px;
+  color: white;
+}
+
+.capsule-music.expanded {
+  max-width: 300px;
+  border-radius: 15px;
+}
+
+.music-toggle {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 2;
+}
+
+.music-toggle:hover {
+  transform: scale(1.1);
+}
+
+.music-controls {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 300px;
+}
+
+.song-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.song-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.song-artist {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: white;
+}
+
+.playback-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.play-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: white;
+  font-size: 1rem;
+}
+
+.play-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.volume-control {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  color: white;
+}
+
+.volume-slider {
+  flex: 1;
+  height: 5px;
+  appearance: none;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  outline: none;
+}
+
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.volume-slider::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .capsule-music {
+    bottom: 70px;
+  }
+  
+  .music-controls {
+    width: 250px;
+  }
+}

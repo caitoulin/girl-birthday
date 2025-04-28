@@ -1,0 +1,81 @@
+:root {
+  /* 主色调 - 温暖浪漫的粉红色系 */
+  --primary-color: #ff6b95;         /* 主要粉色 */
+  --primary-light: #ff9eb5;         /* 浅粉色 */
+  --primary-dark: #e84a7f;          /* 深粉色 */
+  
+  /* 辅助色调 - 提供对比和点缀 */
+  --accent-color: #5e72e4;          /* 蓝紫色 - 用于强调和按钮 */
+  --accent-light: #8093ff;          /* 浅蓝紫色 */
+  --accent-dark: #3b53db;           /* 深蓝紫色 */
+  
+  /* 中性色调 - 用于文本、背景和边框 */
+  --neutral-100: #ffffff;           /* 纯白色 - 主要背景 */
+  --neutral-200: #f8f9fa;           /* 浅灰色 - 次要背景 */
+  --neutral-300: #e9ecef;           /* 浅灰色 - 边框 */
+  --neutral-400: #ced4da;           /* 中灰色 - 不活跃元素 */
+  --neutral-500: #adb5bd;           /* 中灰色 - 次要文本 */
+  --neutral-600: #6c757d;           /* 深灰色 - 次要文本 */
+  --neutral-700: #495057;           /* 深灰色 - 主要文本 */
+  --neutral-800: #343a40;           /* 近黑色 - 标题 */
+  --neutral-900: #212529;           /* 近黑色 - 强调文本 */
+  
+  /* 功能色调 - 用于特定功能区域 */
+  --success: #66bb6a;               /* 成功状态 */
+  --warning: #ffa726;               /* 警告状态 */
+  --error: #ef5350;                 /* 错误状态 */
+  --info: #29b6f6;                  /* 信息状态 */
+  
+  /* 特殊功能色调 */
+  --timecapsule-color: #ff9e80;     /* 时间胶囊功能色 */
+  --wishingstar-color: #5e35b1;     /* 星空许愿功能色 */
+  --gallery-color: #26a69a;         /* 照片墙功能色 */
+  --memory-color: #ec407a;          /* 回忆墙功能色 */
+  --wishes-color: #f06292;          /* 生日祝福功能色 */
+  --game-color: #7e57c2;            /* 游戏功能色 */
+  
+  /* 渐变色 - 用于背景和按钮 */
+  --gradient-primary: linear-gradient(45deg, var(--primary-color), var(--primary-light));
+  --gradient-accent: linear-gradient(45deg, var(--accent-color), var(--accent-light));
+  --gradient-timecapsule: linear-gradient(45deg, var(--timecapsule-color), #ffcc80);
+  --gradient-wishingstar: linear-gradient(45deg, var(--wishingstar-color), #7e57c2);
+  
+  /* 阴影 */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+  
+  /* 圆角 */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 24px;
+  --border-radius-round: 50%;
+  
+  /* 间距 */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+  
+  /* 字体大小 */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+  --font-size-xxxl: 3rem;
+  
+  /* 字体家族 */
+  --font-family-main: 'Roboto', sans-serif;
+  --font-family-heading: 'Pacifico', cursive;
+  --font-family-special: 'Dancing Script', cursive;
+  
+  /* 动画时间 */
+  --transition-fast: 0.2s;
+  --transition-medium: 0.3s;
+  --transition-slow: 0.5s;
+}

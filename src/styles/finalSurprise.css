@@ -1,0 +1,246 @@
+.final-surprise-page {
+  padding: 30px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  min-height: calc(100vh - 130px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.love-letter-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #fff0f5, #fff5f5);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.love-letter-background.show {
+  opacity: 1;
+}
+
+.floating-hearts {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  color: rgba(255, 75, 106, 0.2);
+  font-size: 2rem;
+  animation: float-heart linear infinite;
+}
+
+@keyframes float-heart {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-100px) rotate(360deg);
+  }
+}
+
+.final-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  color: #ff4b6a;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.envelope-container {
+  margin: 0 auto;
+  position: relative;
+  width: 300px;
+  height: 200px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s;
+  margin-bottom: 50px;
+}
+
+.envelope-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.envelope {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-color: #ffccd5;
+  cursor: pointer;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background-image: linear-gradient(45deg, #ffccd5 25%, #ffd6e0 25%, #ffd6e0 50%, #ffccd5 50%, #ffccd5 75%, #ffd6e0 75%, #ffd6e0 100%);
+  background-size: 20px 20px;
+}
+
+.envelope:hover {
+  transform: translateY(-10px) rotate(2deg);
+}
+
+.envelope.open {
+  cursor: default;
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front.flap {
+  top: 0;
+  z-index: 3;
+  background-color: #ffb6c1;
+  clip-path: polygon(0 0, 50% 30%, 100% 0, 100% 0, 0 0);
+  transform-origin: top;
+  transition: transform 1s;
+}
+
+.envelope.open .front.flap {
+  transform: rotateX(180deg);
+}
+
+.front.pocket {
+  background-color: #ffccd5;
+  clip-path: polygon(0 0, 50% 30%, 100% 0, 100% 100%, 0 100%);
+}
+
+.letter {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  width: 270px;
+  height: 180px;
+  background-color: white;
+  z-index: 2;
+  transition: transform 1s;
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 350px;
+}
+
+.letter-content {
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2rem;
+  color: #333;
+  text-align: left;
+  background-image: url('https://images.unsplash.com/photo-1518893063132-36e46dbe2428?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60');
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  position: relative;
+}
+
+.letter-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: -1;
+}
+
+.letter-text p {
+  margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.envelope-hint {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #666;
+  animation: pulse 1.5s infinite;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.final-message {
+  margin-top: 50px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.5rem;
+  color: #ff4b6a;
+  line-height: 1.6;
+  animation: fadeIn 2s;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(255, 75, 106, 0.2);
+}
+
+.heart-animation {
+  margin-top: 30px;
+  position: relative;
+  width: 100px;
+  height: 90px;
+  margin: 30px auto;
+}
+
+.heart-animation .heart {
+  width: 100px;
+  height: 90px;
+  position: absolute;
+  background-color: #ff4b6a;
+  animation: heartbeat 1.5s infinite;
+}
+
+.heart-animation .heart:before,
+.heart-animation .heart:after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 90px;
+  background-color: #ff4b6a;
+  border-radius: 50%;
+}
+
+.heart-animation .heart:before {
+  top: -50px;
+  left: 0;
+}
+
+.heart-animation .heart:after {
+  top: 0;
+  left: 50px;
+}
+
+@media (max-width: 768px) {
+  .final-title {
+    font-size: 2rem;
+  }
+  
+  .envelope-container, .envelope {
+    width: 250px;
+    height: 170px;
+  }
+  
+  .letter {
+    width: 220px;
+    height: 150px;
+    font-size: 1rem;
+  }
+  
+  .final-message {
+    font-size: 1.2rem;
+  }
+}

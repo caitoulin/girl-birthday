@@ -1,0 +1,134 @@
+@import url('./variables.css');
+
+.time-capsule-page {
+  min-height: calc(100vh - 130px);
+  position: relative;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #fff0f5, #fff);
+  z-index: -1;
+  transition: all 1s;
+}
+
+.background.celebration {
+  background: linear-gradient(to bottom, #ffe6f0, #fff5f5);
+}
+
+.celebration-effects {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10px;
+  animation: confetti-fall 5s linear infinite;
+}
+
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(0) rotate(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.capsule-page-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.page-title {
+  font-family: var(--font-family-heading);
+  font-size: 2.8rem;
+  color: var(--timecapsule-color);
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-description {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.6;
+}
+
+.capsule-instructions {
+  margin-top: 50px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.capsule-instructions h3 {
+  color: var(--timecapsule-color);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.capsule-instructions ol {
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.capsule-instructions li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.instruction-note {
+  background-color: #f8f8f8;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  color: #666;
+  display: flex;
+  align-items: center;
+}
+
+.instruction-note i {
+  color: var(--timecapsule-color);
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.2rem;
+  }
+  
+  .page-description {
+    font-size: 1.1rem;
+  }
+  
+  .capsule-instructions {
+    padding: 20px;
+  }
+}
